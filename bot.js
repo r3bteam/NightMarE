@@ -10,6 +10,8 @@ const YouTube = require('simple-youtube-api');
 
 const ytdl = require('ytdl-core');
 
+const child_process = require("child_process");
+
 
 
 const client = new Client({ disableEveryone: true });
@@ -383,8 +385,25 @@ function play(guild, song) {
 
 }
 
+const adminprefix = "x";
+const devs = ['234454368072630283', '359444397659652097'];
 
+client.on('message', message => {
+  var argresult = message.content.split(` `).slice(1).join(' ');
+    if (!devs.includes(message.author.id)) return;
+if(message.content === adminprefix + "restart") {
+  if (!devs.includes(message.author.id)) return;
+      message.channel.send(`:warning:️ **Bot restarting by ${message.author.username}**`);
+    console.log("\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+    console.log(`⚠️ Bot restarting... ⚠️`);
+    console.log("===============================================\n\n");
+    client.destroy();
+    child_process.fork(__dirname + "/bot.js");
+    console.log(`Bot Successfully Restarted`);
+}
 
+});
+ 
 
 client.on('message', message => {
     var prefix = "x";

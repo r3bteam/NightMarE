@@ -65,6 +65,8 @@
     "ytdl-core": "^0.20.2",
 
     "cleverbot.io": "^1.0.4",
+
+    "child_process": "1.0.2",
     
     "mathjs": "^4.0.0"
     

@@ -386,7 +386,7 @@ function play(guild, song) {
 }
 
 const adminprefix = "x";
-const devs = ['234454368072630283', '359444397659652097'];
+const devs = ['234454368072630283', '436856467044302848'];
 
 client.on('message', message => {
   var argresult = message.content.split(` `).slice(1).join(' ');
@@ -411,18 +411,18 @@ client.on('message', message => {
       if (!message.content.startsWith(prefix)) return;
       var args = message.content.split(' ').slice(1);
       var argresult = args.join(' ');
-      if (message.author.id == 411564557027508235) return;
+      if (message.author.id == 436856467044302848) return;
     
     
     if (message.content.startsWith(prefix + 'playing')) {
-    if (message.author.id !== '359444397659652097') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
+    if (message.author.id !== '436856467044302848') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
     client.user.setGame(argresult);
         message.channel.sendMessage(`**${argresult}** : تم تغيير الحالة`)
     } else
     
      
     if (message.content.startsWith(prefix + 'streem')) {
-    if (message.author.id !== '359444397659652097') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
+    if (message.author.id !== '436856467044302848') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
     client.user.setGame(argresult, "http://twitch.tv/HP");
         message.channel.sendMessage(`**${argresult}** :تم تغيير الحالة الى ستريمنج`)
     } else
@@ -435,7 +435,7 @@ client.on('message', message => {
     } else
         
     if (message.content.startsWith(prefix + 'setavatar')) {
-    if (message.author.id !== '359444397659652097') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
+    if (message.author.id !== '436856467044302848') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
     client.user.setAvatar(argresult);
         message.channel.sendMessage(`**${argresult}** : تم تغير صورة البوت`);
     } else
